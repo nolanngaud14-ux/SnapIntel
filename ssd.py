@@ -214,10 +214,10 @@ class Snap_Story_Downloader:
 					#Retrieve the same data as for basic snap stories
 					for story in snap["snapList"]:
 						if(self.parser.download_highlights or self.parser.download_all):
-							if(snap["snapMediaType"] == 0):
-								self.jpg_files.append(snap["snapUrls"]["mediaUrl"])
+							if(story["snapMediaType"] == 0):
+								self.jpg_files.append(story["snapUrls"]["mediaUrl"])
 							else:
-								self.mp4_files.append(snap["snapUrls"]["mediaUrl"])
+								self.mp4_files.append(story["snapUrls"]["mediaUrl"])
 						story_item = list()
 						story_item.append(story["snapIndex"])
 						story_item.append(story["snapUrls"]["mediaUrl"])
